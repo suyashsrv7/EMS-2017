@@ -1,0 +1,27 @@
+.selector-for-some-widget {
+  box-sizing: content-box;
+}
+* {
+    box-sizing: border-box;
+}
+.navbar
+{
+	background: -webkit-linear-gradient(left, #006CAF ,#1ADAFC,#006CAF); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(left,#006CAF ,#1ADAFC,#006CAF);/* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(left, #006CAF ,#1ADAFC,#006CAF); /* For Fx 3.6 to 15 */
+    background: linear-gradient(to right, #006CAF ,#1ADAFC,#006CAF); /* Standard syntax (must be last) */
+}
+body
+{
+    background: url("../images/gears3.svg") no-repeat center fixed; 
+    background-size: cover;
+}
+.bandw
+{
+	-webkit-filter: grayscale(100%);filter: grayscale(100%);
+}
+.bandw:hover
+{
+	-webkit-filter: grayscale(0%);filter: grayscale(0%);
+}
+
