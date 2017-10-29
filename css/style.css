@@ -28,3 +28,9 @@ a{
 button{
     cursor: pointer;
 }
+.modal-header{
+    background-color:#0aa9ff;
+    color:white;
+    border-top-left-radius: .3em; 
+    border-top-right-radius: .3em;
+}
