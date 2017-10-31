@@ -1,5 +1,5 @@
 <?php
-
+	session_start();
 	class USER
 	{
 		private $db;
@@ -32,25 +32,34 @@
 	       }    
 	    }
 
-	    public function login($uname,$email,$password)
+	    public function login($email,$password)
 	    {
 	       try
 	       {
-	          $stmt = $this->db->prepare("SELECT * FROM users WHERE email=:umail LIMIT 1");
-	          $stmt->bindparam(":umail" , $email);
+	          $stmt = $this->db->prepare("SELECT * FROM user WHERE email=:email LIMIT 1");
+	          $stmt->bindparam(":email" , $email);
 	          $stmt->execute();
 	          $userRow=$stmt->fetch(PDO::FETCH_ASSOC);
 	          if($stmt->rowCount() > 0)
 	          {
-	             if(password_verify($upass, $userRow['password']))
+	             if(password_verify($password, $userRow['password']))
 	             {
+
 	                $_SESSION['user_session'] = $userRow['user_id'];
 	                return true;
 	             }
 	             else
 	             {
-	                return false;
+	             	var_dump($password);
+	             	
+	             	
+	             	return false;
 	             }
+	          }
+	          else
+	          {
+	          		var_dump("false");
+	          		return false;
 	          }
 	       }
 	       catch(PDOException $e)

@@ -90,7 +90,7 @@
 
 		        if($stmt->rowCount() > 0)
 		        {
-		         	$err['duplicate'] = "*email already taken";
+		         	$err['email'] = "*email already taken";
 		        }
 
 			}
@@ -149,10 +149,11 @@
 		<span id = 'err_lname'><?php if(isset($err['lastname'])){echo $err['lastname'];}?></span><br>
 		<input id ='email' type = "text" name="email" placeholder = "Email"<?php if(isset($email)){echo "value = ".$email;}?>>
 		<span id ='err_email'><?php if(isset($err['email'])){echo $err['email'];}?></span><br>
-		<input id = 'pass' type = "TEXT" name = "password" placeholder = "Password">
+		<input id = 'pass' type = "password" name = "password" placeholder = "Password">
 		<span id = 'err_pass'><?php if(isset($err['password'])){echo $err['password'];}?></span><br>
-		<input id = 'cpass' type = "TEXT" name="c_password" placeholder = "Confirm Password" >
+		<input id = 'cpass' type = "password" name="c_password" placeholder = "Confirm Password" >
 		<span id = 'err_cpass'><?php if(isset($err['cpass'])){echo $err['cpass'];}?></span><br>
+		
 		<input type = "submit" name = "register" value = "register">
 	</form>
 </body>
