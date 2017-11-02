@@ -34,3 +34,30 @@ button{
     border-top-left-radius: .3em; 
     border-top-right-radius: .3em;
 }
+.btstyle
+{
+    color: white;
+    background-color: #3e4042;
+    opacity: 0.8;
+    font-size: 200%;
+}
+.btstyle:hover{
+    opacity: 0.99;
+    box-shadow: 10 10 10 10;
+    -webkit-transform:scale(1.1);
+    transform:scale(1.1);
+    box-shadow: 5px 5px 25px darkgrey;
+}
+.btstyle2
+{
+    color: white;
+    background-color: darkgrey;
+    opacity: 0.8;
+}
+.btstyle2:hover{
+    opacity: 0.99;
+    box-shadow: 10 10 10 10;
+    -webkit-transform:scale(1.1);
+    transform:scale(1.1);
+    box-shadow: 5px 5px 25px darkgrey;
+}
