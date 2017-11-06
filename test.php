@@ -1,16 +1,8 @@
 <?php
-	$err = null;
-	
+	$password = "sdk158Z#";
+	$password_hash = password_hash($password , PASSWORD_BCRYPT);
 
-	if(isset($err))
-	{
-		echo "keep array_walk_recursive(input, funcname)";
-	}
-
-	foreach($err as $value)
-	{
-		echo $value;
-	}
+	echo $password_hash;	
 
 
 ?>

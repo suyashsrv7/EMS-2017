@@ -67,10 +67,13 @@
 	       {
 	           echo $e->getMessage();
 	       }
-	   }
+	    }
 
-	   public function is_loggedin()
-	   {
+	  
+	   
+
+	    public function is_loggedin()
+	    {
 	      if(isset($_SESSION['user_session']))
 	      {
 	         return true;
@@ -79,18 +82,18 @@
 	      {
 	      	 return false;
 	      }
-	   }
+	    }
 	 
-	   public function redirect($url)
-	   {
+	    public function redirect($url)
+	    {
 	       header("Location: $url");
-	   }
+	    }
 	 
-	   public function logout()
-	   {
+	    public function logout()
+	    {
 	        session_destroy();
 	        unset($_SESSION['user_session']);
 	        return true;
-	   }
+	    }
 	}
 ?>

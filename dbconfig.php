@@ -18,5 +18,7 @@
 	$user = new USER($conn);
     include 'class.organiser.php';
     $organiser = new ORGANISER($conn);
+    include 'class.admin.php';
+    $admin = new ADMIN($conn); 
 
 ?>

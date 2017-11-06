@@ -6,18 +6,6 @@
 		$organiser->logout();
 		$organiser->redirect("loggedin.php");
 	}
-
-	if(isset($_POST['login']))
-	{
-		$email = $_POST['email'];
-		$password = $_POST['password'];
-
-		if($organiser->login($email , $password)) 
-		{
-			$organiser->redirect("loggedin.php");
-		}
-	}
-
 ?>
 
 <!DOCTYPE html>

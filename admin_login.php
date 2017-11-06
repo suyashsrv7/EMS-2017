@@ -1,10 +1,17 @@
 <?php
-
+	require("dbconfig.php");
+	if($admin->is_loggedin())
+	{
+		session_destroy();
+		$admin->redirect("loggedin.php");
+	}
 ?>
 <!DOCTYPE html>
 <html>
 <head>
 	<title></title>
+	<script type="text/javascript" src = "javascript/jquery-3.2.1.js"></script>
+	<script type="text/javascript" src = "javascript/admin_login.js" ></script>
 </head>
 <body>
 	<form action = "admin_login.php" method = "post" id = "login_form">

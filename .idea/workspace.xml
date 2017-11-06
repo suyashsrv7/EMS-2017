@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9617e8d-2b75-4c89-adda-ee37233369b2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/validate_user.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/validate_user.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin_login.php" afterPath="$PROJECT_DIR$/admin_login.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/class.user.php" afterPath="$PROJECT_DIR$/class.user.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/create_events.php" afterPath="$PROJECT_DIR$/create_events.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dbconfig.php" afterPath="$PROJECT_DIR$/dbconfig.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login.php" afterPath="$PROJECT_DIR$/login.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php_constants.php" afterPath="$PROJECT_DIR$/php_constants.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/signup.php" afterPath="$PROJECT_DIR$/signup.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/organiser_login.php" afterPath="$PROJECT_DIR$/organiser_login.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.php" afterPath="$PROJECT_DIR$/test.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -25,10 +21,12 @@
         <entry file="file://$PROJECT_DIR$/class.user.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="94" column="2" lean-forward="false" selection-start-line="94" selection-start-column="2" selection-end-line="94" selection-end-column="2" />
+              <caret line="98" column="2" lean-forward="false" selection-start-line="98" selection-start-column="2" selection-end-line="98" selection-end-column="2" />
               <folding>
-                <marker date="1509553980058" expanded="true" signature="342:545" ph="INSERT INTO participants... " />
-                <marker date="1509553980058" expanded="true" signature="1249:1302" ph="SELECT * FRO... participants" />
+                <marker date="1509947810579" expanded="true" signature="196:976" ph="{...}" />
+                <marker date="1509947810579" expanded="true" signature="215:976" ph="{...}" />
+                <marker date="1509947810579" expanded="true" signature="342:545" ph="INSERT INTO participants... " />
+                <marker date="1509947810579" expanded="true" signature="2457:2461" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -49,7 +47,11 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="527">
               <caret line="31" column="167" lean-forward="false" selection-start-line="31" selection-start-column="167" selection-end-line="31" selection-end-column="167" />
-              <folding />
+              <folding>
+                <marker date="1509902480456" expanded="true" signature="4429:6452" ph="..." />
+                <marker date="1509902480456" expanded="true" signature="4429:6460" ph="..." />
+                <marker date="1509902480456" expanded="true" signature="4434:6443" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -218,8 +220,10 @@
         <state relative-caret-position="1598">
           <caret line="94" column="2" lean-forward="false" selection-start-line="94" selection-start-column="2" selection-end-line="94" selection-end-column="2" />
           <folding>
-            <marker date="1509553980058" expanded="true" signature="342:545" ph="INSERT INTO participants... " />
-            <marker date="1509553980058" expanded="true" signature="1249:1302" ph="SELECT * FRO... participants" />
+            <marker date="1509947810579" expanded="true" signature="196:976" ph="{...}" />
+            <marker date="1509947810579" expanded="true" signature="215:976" ph="{...}" />
+            <marker date="1509947810579" expanded="true" signature="342:545" ph="INSERT INTO participants... " />
+            <marker date="1509947810579" expanded="true" signature="2457:2461" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -236,7 +240,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
           <caret line="31" column="167" lean-forward="false" selection-start-line="31" selection-start-column="167" selection-end-line="31" selection-end-column="167" />
-          <folding />
+          <folding>
+            <marker date="1509902480456" expanded="true" signature="4429:6452" ph="..." />
+            <marker date="1509902480456" expanded="true" signature="4429:6460" ph="..." />
+            <marker date="1509902480456" expanded="true" signature="4434:6443" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -297,10 +305,12 @@
     <entry file="file://$PROJECT_DIR$/class.user.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="94" column="2" lean-forward="false" selection-start-line="94" selection-start-column="2" selection-end-line="94" selection-end-column="2" />
+          <caret line="98" column="2" lean-forward="false" selection-start-line="98" selection-start-column="2" selection-end-line="98" selection-end-column="2" />
           <folding>
-            <marker date="1509553980058" expanded="true" signature="342:545" ph="INSERT INTO participants... " />
-            <marker date="1509553980058" expanded="true" signature="1249:1302" ph="SELECT * FRO... participants" />
+            <marker date="1509947810579" expanded="true" signature="196:976" ph="{...}" />
+            <marker date="1509947810579" expanded="true" signature="215:976" ph="{...}" />
+            <marker date="1509947810579" expanded="true" signature="342:545" ph="INSERT INTO participants... " />
+            <marker date="1509947810579" expanded="true" signature="2457:2461" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -325,7 +335,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
           <caret line="31" column="167" lean-forward="false" selection-start-line="31" selection-start-column="167" selection-end-line="31" selection-end-column="167" />
-          <folding />
+          <folding>
+            <marker date="1509902480456" expanded="true" signature="4429:6452" ph="..." />
+            <marker date="1509902480456" expanded="true" signature="4429:6460" ph="..." />
+            <marker date="1509902480456" expanded="true" signature="4434:6443" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
