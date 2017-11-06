@@ -89,44 +89,126 @@ $(document).ready(function(){
 
 	}
 
-	function show_password()
+	function validate_mobno()
 	{
-		alert("hello");
+		val = $('#mobno').val();
+		console.log("validate_mobno");
+		var regex =/^[789]\d{9}$/;
+		if(val == "")
+		{
+			$('#err_mobno').text("Mobile number is empty");
+			$('#err_mobno').show();
+		}
+		else if((regex.test(val)) != true)
+		{
+			$('#err_mobno').text("invalid mobile number");
+			$('#err_mobno').show();
+		}
 	}
 
+	function validate_address()
+	{
+		val = $('#address').val();
+		
+		if(val == "")
+		{
+			$('#err_address').text("address is empty");
+			$('#err_address').show();
+
+		} 
+		
+	}
+
+	function validate_city()
+	{
+		val = $('#city').val();
+		var regex = /^[A-z ]+$/ ;//city regex
+		if(val == "")
+		{
+			$('#err_city').text("city is empty");
+			$('#err_city').show();
+		}
+		else if((regex.test(val)) != true)
+		{
+			$('#err_city').text("invalid city name");
+			$('#err_city').show();
+		}
+
+	}
+
+	function validate_organisation()
+    {
+        var val = $('#organisation').val();
+
+        if(val == '')
+        {
+            $('#err_organisation').text("firstname empty");
+            $('#err_organisation').show();
+        }
+        else if(( /^[A-z ]+$/.test(val))!=true)
+        {
+            $('#err_organisation').text("invalid firstname");
+            $('#err_organisation').show();
+        }
+
+    }
 	$("#fname").blur(function(){
 		validate_fname();
-		
-	});
+    });
 	$("#fname").focus(function(){
 		
-		$(err_fname).hide();
+		$("#err_fname").hide();
 	});
 	$("#lname").blur(function(){
 		validate_lname();
 	});
 	$("#lname").focus(function(){
-		$(err_lname).hide();
+		$('#err_lname').hide();
 	});
 	$("#email").blur(function(){
 		validate_email();
 	});
 	$("#email").focus(function(){
-		$(err_email).hide();
+		$('#err_email').hide();
 	});
 	$("#pass").blur(function(){
 		validate_password();
 	});
 	$("#pass").focus(function(){
-		$(err_pass).hide();
+		$('#err_pass').hide();
 	});
 	$("#cpass").keyup(function(){
 		validate_cpassword();
 	});
 	$("#cpass").focus(function(){
-		$(err_cpass).hide();
+		$('#err_cpass').hide();
 	});
-	$("#login_form").on('submit' , function(){
-		console.log("hi");
-	})
+	$("#mobno").focus(function(){
+		$('#err_mobno').hide();
+	});
+	$("#mobno").blur(function(){
+		validate_mobno();
+	});
+	$("#address").focus(function(){
+		$('#err_address').hide();
+	});
+	$("#address").blur(function(){
+		validate_address();
+	});
+	$("#city").focus(function(){
+		$('#err_city').hide();
+	});
+	$("#city").blur(function(){
+		validate_city();
+	});
+	$("#organisation").focus(function(){
+	    $("#err_organisation").hide();
+    });
+	$("#organisation").blur(function(){
+	    validate_organisation();
+    });
+	$("#descriptionn").focus(function(){
+	    $("#err_description").hide();
+    })
+
 });

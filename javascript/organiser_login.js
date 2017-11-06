@@ -6,7 +6,7 @@ $(document).ready(function(){
 
 		$.ajax({
 			type : "POST",
-			url : "check_user.php",
+			url : "check_organiser.php",
 			data : datastring,
 			datatype : "json",
 			cache : false,

@@ -16,5 +16,7 @@
 
 	include 'class.user.php';
 	$user = new USER($conn);
+    include 'class.organiser.php';
+    $organiser = new ORGANISER($conn);
 
 ?>

@@ -1,6 +1,7 @@
 <?php
-	session_start();
-	class USER
+
+	
+	class ORGANISER
 	{
 		private $db;
 
@@ -9,14 +10,13 @@
 			$this->db = $conn;
 		}
 
-		public function register($fname,$lname,$email,$password,$address,$city,$mobno)
-	    {
-	       try
-	       {
-	           $new_password = password_hash($password, PASSWORD_BCRYPT);
+		public function registerOrganiser($fname,$lname,$email,$password,$address,$city,$mobno,$organisation,$description)
+		{
+			try
+			{
+			   $new_password = password_hash($password, PASSWORD_BCRYPT);
 	   
-	           $stmt = $this->db->prepare("INSERT INTO participants (firstname, lastname, mobile, password, address, city, email) 
-	                                                       VALUES(:fname, :lname, :mobno, :upass, :add, :city, :email)");
+	           $stmt = $this->db->prepare("INSERT INTO organiser (firstname, lastname, mobile, password, address, city, email, organisation, description) VALUES(:fname, :lname, :mobno, :upass, :add, :city, :email, :organisation, :description)");
 	              
 	           $stmt->bindparam(":fname", $fname);
 	           $stmt->bindparam(":lname", $lname);
@@ -26,22 +26,22 @@
 	           $stmt->bindparam(":add", $address);
 	           $stmt->bindparam(":city", $city);
 	           $stmt->bindparam(":email", $email);
-	           $stmt->bindparam(":email", $email);
-	           $stmt->bindparam(":email", $email);
-	           $stmt->execute(); 
-	           return$stmt ; 
-	       }
-	       catch(PDOException $e)
-	       {
-	           echo $e->getMessage();
-	       }    
-	    }
+	           $stmt->bindparam(":organisation", $organisation);
+	           $stmt->bindparam(":description", $description); 
+	           $stmt->execute();
+	           return $stmt;
+	        }
+			catch(PDOException $e)
+			{
+				echo $e->getMessage();
+			}
+		}
 
-	    public function login($email,$password)
+		public function login($email,$password)
 	    {
 	       try
 	       {
-	          $stmt = $this->db->prepare("SELECT * FROM participants WHERE email=:email LIMIT 1");
+	          $stmt = $this->db->prepare("SELECT * FROM organiser WHERE email=:email LIMIT 1");
 	          $stmt->bindparam(":email" , $email);
 	          $stmt->execute();
 	          $userRow=$stmt->fetch(PDO::FETCH_ASSOC);
@@ -50,7 +50,7 @@
 	             if(password_verify($password, $userRow['password']))
 	             {
 
-	                $_SESSION['user_session'] = $userRow['participant_id'];
+	                $_SESSION['user_session'] = $userRow['organiser_id'];
 	                return true;
 	             }
 	             else
@@ -67,10 +67,11 @@
 	       {
 	           echo $e->getMessage();
 	       }
-	   }
+	    }
 
-	   public function is_loggedin()
-	   {
+
+		public function is_loggedin()
+	    {
 	      if(isset($_SESSION['user_session']))
 	      {
 	         return true;
@@ -79,12 +80,12 @@
 	      {
 	      	 return false;
 	      }
-	   }
-	 
-	   public function redirect($url)
-	   {
+	    }
+
+	    public function redirect($url)
+	    {
 	       header("Location: $url");
-	   }
+	    }
 	 
 	   public function logout()
 	   {
@@ -92,5 +93,7 @@
 	        unset($_SESSION['user_session']);
 	        return true;
 	   }
+
 	}
+
 ?>

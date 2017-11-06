@@ -3,6 +3,6 @@
 	define("host" , "localhost");
 	define("username" , "root");
 	define("password" , "");
-	define("dbname" , "ems");
+	define("dbname" , "ems4");
 
 ?>
