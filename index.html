@@ -28,7 +28,7 @@
 					<a class="nav-link" data-toggle="modal" data-target="#OrganiserLoginModal">Create Event</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Browse events<span class="sr-only"></span></a>
+					<a class="nav-link" href="browse_events.html">Browse events<span class="sr-only"></span></a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" data-toggle="modal" data-target="#LoginModal">Login</a>
@@ -43,37 +43,36 @@
 		</div>
 	</nav>
 	<img class="fixed-top" style="margin-top: 71px; vertical-align:top; " src="images/shadow.png" width="100%">
+	<div class="container">
+		<div style="vertical-align: top;" id="carouselExampleSlidesOnly" class="carousel slide bandw" data-ride="carousel">
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img class="d-block w-100" src="images/slide01.jpg" alt="First slide">
+				</div>
 
-	<div style="vertical-align: top;" id="carouselExampleSlidesOnly" class="carousel slide bandw" data-ride="carousel">
-		<div class="carousel-inner">
-			<div class="carousel-item active">
-				<img class="d-block w-100" src="images/slide01.jpg" alt="First slide">
+				<div class="carousel-item">
+					<img class="d-block w-100" src="images/slide02.jpg" alt="Second slide">
+				</div>
+
+				<div class="carousel-item">
+					<img class="d-block w-100" src="images/slide03.jpg" alt="Third slide">
+				</div>
+
+				<div class="carousel-item">
+					<img class="d-block w-100" src="images/slide04.jpg" alt="Third slide">
+				</div>
+
 			</div>
+		</div>
+		<img style="vertical-align:top" src="images/shadow.png" width="100%">
+		<!-- Button trigger modal -->
 
-			<div class="carousel-item">
-				<img class="d-block w-100" src="images/slide02.jpg" alt="Second slide">
-			</div>
 
-			<div class="carousel-item">
-				<img class="d-block w-100" src="images/slide03.jpg" alt="Third slide">
-			</div>
-
-			<div class="carousel-item">
-				<img class="d-block w-100" src="images/slide04.jpg" alt="Third slide">
-			</div>
-
+		<div style="text-align: center;" class="container">
+			<h1 style="color: #006CAF;">Take Your Best Shot...</h1>
+			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#LoginModal">Get Started</button>
 		</div>
 	</div>
-	<img style="vertical-align:top" src="images/shadow.png" width="100%">
-	
-	<!-- Button trigger modal -->
-
-
-	<div style="text-align: center;" class="container">
-		<h1 style="color: #006CAF;">Take Your Best Shot...</h1>
-		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#LoginModal">Get Started</button>
-	</div>
-
 	<!-- Modal for login -->
 	<div class="modal fade" id="LoginModal" tabindex="-1" role="dialog" aria-labelledby="LoginModalLabel" aria-hidden="true">
 		<div class="modal-dialog" role="document">
@@ -109,8 +108,8 @@
 
 	<!-- Modal for Sign up -->
 	
-	<div class="modal fade" id="SignupModalLong" tabindex="-1" role="dialog" aria-labelledby="SignupModalLongLabel" aria-hidden="true">
-		<div class="modal-dialog" role="document">
+	<div class="modal fade bd-example-modal-lg" id="SignupModalLong" tabindex="-1" role="dialog" aria-labelledby="SignupModalLongLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
 					<h5 style="margin: 0 auto;" class="modal-title" id="SignupModalLongLabel">Sign Up</h5>
@@ -121,35 +120,50 @@
 				<div class="modal-body">
 					<form class="container">
 						<div class="row">
-							<div class="col">
+							<div class="col-md-6">
 								<label><b>First Name</b></label>
 								<input type="text" class="form-control" placeholder="First name">
 							</div>
-							<div class="col">
+							<div class="col-md-6">
 								<label><b>Last Name</b></label>
 								<input type="text" class="form-control" placeholder="Last name">
 							</div>
 						</div>
 						<br>
-						<label><b>Address</b></label>
-						<input type="text" class="form-control" placeholder="Address">
+						<div class="row">
+							<div class="col-md-6">
+								<label><b>Address</b></label>
+								<input type="text" class="form-control" placeholder="Address">
+							</div>
+							<div class="col-md-6">
+								<label><b>City</b></label>
+								<input type="text" class="form-control" placeholder="City">
+							</div>
+						</div>
 						<br>
-						<label><b>City</b></label>
-						<input type="text" class="form-control" placeholder="City">
+						<div class="row">
+							<div class="col-md-6">
+								<label><b>Mobile No.</b></label>
+								<input type="text" class="form-control" placeholder="Mobile No.">
+							</div>
+							<div class="col-md-6">
+								<label><b>Email id</b></label>
+								<input type="text" class="form-control" placeholder="Username">
+							</div>
+						</div>
 						<br>
-						<label><b>Mobile No.</b></label>
-						<input type="text" class="form-control" placeholder="Mobile No.">
-						<br>
-						<label><b>Email id</b></label>
-						<input type="text" class="form-control" placeholder="Username">
-						<br>
-						<i class="fa fa-key" aria-hidden="true"></i>
-						<label><b>Password</b></label>
-						<input type="password" class="form-control" placeholder="Password">
-						<br>
-						<i class="fa fa-key" aria-hidden="true"></i>
-						<label><b>Confirm Password</b></label>
-						<input type="password" class="form-control" placeholder="Password" >
+						<div class="row">
+							<div class="col-md-6">							
+								<i class="fa fa-key" aria-hidden="true"></i>
+								<label><b>Password</b></label>
+								<input type="password" class="form-control" placeholder="Password">
+							</div>
+							<div class="col-md-6">
+								<i class="fa fa-key" aria-hidden="true"></i>
+								<label><b>Confirm Password</b></label>
+								<input type="password" class="form-control" placeholder="Password" >
+							</div>
+						</div>
 						<br>
 						<div class="container" style="text-align: center;">
 							<button  class="btn btn-primary" type="submit">Register</button>
@@ -199,8 +213,8 @@
 
 	<!-- Modal for Organiser Sign up -->
 	
-	<div class="modal fade" id="OrganiserSignupModalLong" tabindex="-1" role="dialog" aria-labelledby="OrganiserSignupModalLongLabel" aria-hidden="true">
-		<div class="modal-dialog" role="document">
+	<div class="modal fade bd-example-modal-lg" id="OrganiserSignupModalLong" tabindex="-1" role="dialog" aria-labelledby="OrganiserSignupModalLongLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
 					<h5 style="margin: 0 auto;" class="modal-title" id="OrganiserSignupModalLongLabel">Organiser Sign Up</h5>
@@ -211,48 +225,65 @@
 				<div class="modal-body">
 					<form class="container">
 						<div class="row">
-							<div class="col">
+							<div class="col-md-6">
 								<label><b>First Name</b></label>
 								<input type="text" class="form-control" placeholder="First name">
 							</div>
-							<div class="col">
+							<div class="col-md-6">
 								<label><b>Last Name</b></label>
 								<input type="text" class="form-control" placeholder="Last name">
 							</div>
 						</div>
 						<br>
-						<label><b>Address</b></label>
-						<input type="text" class="form-control" placeholder="Address">
-						<br>
-						<label><b>City</b></label>
-						<input type="text" class="form-control" placeholder="City">
-						<br>
-						<label><b>Mobile No.</b></label>
-						<input type="text" class="form-control" placeholder="Mobile No.">
-						<br>
-						<label><b>Email id</b></label>
-						<input type="text" class="form-control" placeholder="Username">
-						<br>
-						<label><b>Organisation</b></label>
-						<input type="text" class="form-control" placeholder="Organisation">
-						<br>
-						<label><b>Description</b></label>
-						<input type="text" class="form-control" placeholder="Description">
-						<br>
-						<i class="fa fa-key" aria-hidden="true"></i>
-						<label><b>Password</b></label>
-						<input type="password" class="form-control" placeholder="Password">
-						<br>
-						<i class="fa fa-key" aria-hidden="true"></i>
-						<label><b>Confirm Password</b></label>
-						<input type="password" class="form-control" placeholder="Password" >
-						<br>
-						<div class="container" style="text-align: center;">
-							<button  class="btn btn-primary" type="submit">Register</button>
+						<div class="row">
+							<div class="col-md-6">
+								<label><b>Address</b></label>
+								<input type="text" class="form-control" placeholder="Address">
+							</div>
+							<div class="col-md-6">
+								<label><b>City</b></label>
+								<input type="text" class="form-control" placeholder="City">
+							</div>
 						</div>
-						<br><br><hr>
-						<div>
+						<br>
+						<div class="row">
+							<div class="col-md-6">
+								<label><b>Mobile No.</b></label>
+								<input type="text" class="form-control" placeholder="Mobile No.">
+							</div>
+							<div class="col-md-6">
+								<label><b>Email id</b></label>
+								<input type="text" class="form-control" placeholder="Username">
+							</div>
+						</div>
+						<br>
+						<div class="row">
+							<div class="col-md-6">
+								<label><b>Organisation</b></label>
+								<input type="text" class="form-control" placeholder="Organisation">
+							</div>
+							<div class="col-md-6">
+								<label><b>Description</b></label>
+								<input type="text" class="form-control" placeholder="Description">
+							</div>
+						</div>
+						<br>
+						<div class="row">
+							<div class="col-md-6">
+								<i class="fa fa-key" aria-hidden="true"></i>
+								<label><b>Password</b></label>
+								<input type="password" class="form-control" placeholder="Password">
+							</div>
+							<div class="col-md-6">
+								<i class="fa fa-key" aria-hidden="true"></i>
+								<label><b>Confirm Password</b></label>
+								<input type="password" class="form-control" placeholder="Password">
+							</div>
+						</div>
+						<hr>
+						<div class="container">
 							<a data-dismiss="modal" data-toggle="modal" data-target="#OrganiserLoginModal">Already an Organiser?</a>
+							<button  style="float: right;" class="btn btn-primary" type="submit">Register</button>
 						</div>
 					</form>
 				</div>
