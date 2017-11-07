@@ -34,7 +34,7 @@ require_once'dbconnect.php';
 
 <?php
 
-$stmt= $pdo->prepare("SELECT * FROM event_organiser");
+$stmt= $pdo->prepare("SELECT * FROM organiser");
 $stmt->execute();
 
 ?>
@@ -45,22 +45,20 @@ $stmt->execute();
 <?php
 while($row=$stmt->fetch(PDO::FETCH_ASSOC))
       {
-        $user_id=$row["user_id"];
-        $stmt1=$pdo->prepare("SELECT * FROM user WHERE user_id=:id");
-        $stmt1->bindparam(":id",$user_id);
-        $stmt1->execute();
-        $row1=$stmt1->fetch(PDO::FETCH_ASSOC);
+        $user_id=$row["organiser_id"];
+        
+       
 
         echo "<table><tr>";
-        echo "<td>".$row['user_id']."</td>";
-        echo "<td>".$row['organiser_name']."</td> ";
-        echo "<td>".$row['contact_no']."</td>";
-        echo "<td>".$row1["email"]."</td>";
+        echo "<td>".$row['organiser_id']."</td>";
+        echo "<td>".$row['organisation']."</td> ";
+        echo "<td>".$row['mobile']."</td>";
+        echo "<td>".$row["email"]."</td>";
         echo "<td>".$row["address"]."</td>";
       
       
           
-          $k=$row['user_id'];
+          $k=$row['organiser_id'];
           
 
           ?>

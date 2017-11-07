@@ -1,3 +1,4 @@
+
 <?php
 
 require_once'dbconnect.php';
@@ -42,7 +43,7 @@ require_once'dbconnect.php';
     $participant_id=$row1['participant_id'];
     
 
-    $stmt3=$pdo->prepare("SELECT * FROM participants INNER JOIN user ON user.user_id=participants.user_id AND user.user_id=:id");
+    $stmt3=$pdo->prepare("SELECT * FROM participants WHERE participant_id=:id");
     $stmt3->bindparam(":id",$participant_id);
     $stmt3->execute();
     $row3=$stmt3->fetch(PDO::FETCH_ASSOC);
@@ -50,10 +51,11 @@ require_once'dbconnect.php';
         
 
       echo "<table><tr>";
-      echo"<td>".$row3['user_id']."</td>";
+      echo"<td>".$row3['participant_id']."</td>";
       echo"<td>".$row3['firstname']."</td> ";
-      echo"<td>".$row3['lastname']."</td>";
-      echo"<td>".$row3['contact_no']."</td>";
+       echo"<td>".$row3['lastname']."</td> ";
+      
+      echo"<td>".$row3['mobile']."</td>";
       echo"<td>".$row3['email']."</td>";
       echo"<td>".$row3["address"]."</td>";
       

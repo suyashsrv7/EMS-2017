@@ -17,7 +17,7 @@ class organiser
  	try
     {
 
-      $stmt=$this->db->prepare("UPDATE event_organiser SET blacklisted='1' WHERE user_id=:id");
+      $stmt=$this->db->prepare("UPDATE organiser SET blacklisted='1' WHERE organiser_id=:id");
       $stmt->bindparam(":id",$id);
       $stmt->execute();
     
@@ -37,13 +37,13 @@ public function view_organiser_info($id)
      {
     
      
-             $stmt1=$this->db->prepare("SELECT * FROM event_organiser WHERE user_id=:id");
+             $stmt1=$this->db->prepare("SELECT * FROM organiser WHERE organiser_id=:id");
              $stmt1->bindparam(":id",$id);
              $stmt1->execute();
              $row1=$stmt1->fetch(PDO::FETCH_ASSOC);
              $rows=$stmt1->rowCount();
     
-             $organiser_description=$row1['organiser_description'];
+             $organiser_description=$row1['description'];
              echo "<table><tr>";
              echo "<td>".$organiser_description."</td>";
              echo "</tr></table>";   

@@ -31,7 +31,7 @@ include_once'dbconnect.php';
     
    
   
-  $stmt=$pdo->prepare("SELECT * FROM events");
+  $stmt=$pdo->prepare("SELECT * FROM events WHERE status='0'  ");
   $stmt->execute();
 
   while($row=$stmt->fetch(PDO::FETCH_ASSOC))
@@ -53,17 +53,17 @@ include_once'dbconnect.php';
         echo "<table><tr>";
         $id=$row['organiser_id'];
         
-        $stmt1=$pdo->prepare("SELECT * FROM event_organiser WHERE user_id=:id");
+        $stmt1=$pdo->prepare("SELECT * FROM organiser WHERE organiser_id=:id");
         $stmt1->bindparam(":id",$id);
         $stmt1->execute();
         $row1=$stmt1->fetch(PDO::FETCH_ASSOC);
 
 
-        $organiser_name=$row1['organiser_name'];
+        $organiser_name=$row1['organisation'];
         
 
         
-        $organiser_description=$row1['organiser_description'];
+        $organiser_description=$row1['description'];
         ?>
         
         <?php
@@ -71,9 +71,9 @@ include_once'dbconnect.php';
           echo"<td>".$row['event_id']."</td>";
           echo"<td>".$row['title']."</td> ";
           echo"<td>".$organiser_name."</td>";
-          echo"<td>".$row['event_category']."</td>";
-          echo"<td>".$row['start']."</td>";
-          echo"<td>".$row["end"]."</td>";
+          echo"<td>".$row['category']."</td>";
+          echo"<td>".$row['event_start']."</td>";
+          echo"<td>".$row["event_end"]."</td>";
           
           
             $k=$row['event_id'];

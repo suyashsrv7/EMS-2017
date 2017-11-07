@@ -17,15 +17,20 @@ function __construct($pdo)
     $stmt1->bindparam(":id",$id);
     $stmt1->execute();
 
-    $stmt2=$this->db->prepare("DELETE FROM participants WHERE user_id=:id");
+    $stmt2=$this->db->prepare("DELETE FROM participants WHERE participant_id=:id");
     $stmt2->bindparam(":id",$id);
     $stmt2->execute();
 
 
-    $stmt3=$this->db->prepare("DELETE FROM user WHERE user_id=:id");
-    $stmt3->bindparam(":id",$id);
-    $stmt3->execute();
-   
+    
+ }
+
+ public function give_feedback($id,$feedback,$participant_id)
+ {
+   echo "done";
+  $stmt=$this->db->prepare("INSERT INTO `reviews` (`id`, `event_id`, `participant_id`, `review`) VALUES (NULL, '$id', '$participant_id', '$feedback')");
+  $stmt->execute();
+  
  }
 
 }

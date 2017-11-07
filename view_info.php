@@ -11,11 +11,32 @@ $event=new event($pdo);
 $event->view_event_info($id);
 }
 
-else
+elseif(isset($_POST["view_organiser"]))
 {
 $id=$_POST["view_organiser"];
 echo $id;
 $organiser=new organiser($pdo);
 $organiser->view_organiser_info($id);
 }
+
+
+elseif(isset($_GET["view_event"]))
+{
+$id=$_GET["view_event"];
+echo $id;
+$event=new event($pdo);
+$event->view_event_info($id);
+?>
+<input type="button" name="register" value="register">
+<?php
+}
+
+else
+{
+$id=$_GET["view_organiser"];
+echo $id;
+$organiser=new organiser($pdo);
+$organiser->view_organiser_info($id);
+}
+
 ?>

@@ -1,0 +1,63 @@
+.selector-for-some-widget {
+  box-sizing: content-box;
+}
+* {
+    box-sizing: border-box;
+}
+.navbar
+{
+	background-color: #0aa9ff;
+    opacity: 0.7;
+}
+body
+{
+    background: url("../images/gears3.svg") no-repeat center fixed; 
+    background-size: cover;
+}
+.bandw
+{
+	-webkit-filter: grayscale(100%);filter: grayscale(100%);
+}
+.bandw:hover
+{
+	-webkit-filter: grayscale(0%);filter: grayscale(0%);
+}
+a{
+    cursor: pointer;
+}
+button{
+    cursor: pointer;
+}
+.modal-header{
+    background-color:#0aa9ff;
+    color:white;
+    border-top-left-radius: .3em; 
+    border-top-right-radius: .3em;
+}
+.btstyle
+{
+    color: white;
+    background-color: #3e4042;
+    opacity: 0.8;
+    font-size: 200%;
+}
+.btstyle:hover{
+    opacity: 0.99;
+    box-shadow: 10 10 10 10;
+    -webkit-transform:scale(1.1);
+    transform:scale(1.1);
+    box-shadow: 5px 5px 25px darkgrey;
+}
+.btstyle2
+{
+    color: white;
+    background-color: darkgrey;
+    opacity: 0.8;
+}
+.btstyle2:hover{
+    opacity: 0.99;
+    box-shadow: 10 10 10 10;
+    -webkit-transform:scale(1.1);
+    transform:scale(1.1);
+    box-shadow: 5px 5px 25px darkgrey;
+}

@@ -1,7 +1,7 @@
 <?php
 require_once'dbconnect.php';
  $name="";
-    $stmt=$pdo->prepare("SELECT * FROM events WHERE status='granted'");
+    $stmt=$pdo->prepare("SELECT * FROM events WHERE status='1'");
     $stmt->execute();
     ?>
 

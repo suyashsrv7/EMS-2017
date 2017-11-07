@@ -4,8 +4,8 @@ include_once'dbconnect.php';
 include_once 'classes/organiser.php';  
 include_once 'classes/event.php';
 include_once 'classes/participant.php';
-$name=$_REQUEST["name"];
-$id=$_REQUEST["id"];
+$name=$_POST["name"];
+$id=$_POST["id"];
 
 
 
