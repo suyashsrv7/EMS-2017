@@ -38,7 +38,7 @@
 		<span id = "err_login_password"><?php if(isset($err_login_password)){echo $err_login_password;}?></span>
 		<input id = "login" type = "submit" name = "login" value = "login">
 	</form>
-	<a href = "#">forgot password ?</a> <!--forgot password sending mail-->
+	<a href = "forgot_password.php?table=participants">forgot password ?</a> <!--forgot password sending mail-->
 
 </body>
 </html>

@@ -1,5 +1,5 @@
 <?php
-
+	require("dbconfig.php");
 	if(isset($_POST['submit']))
 	{
 		$title = $_POST['title'];
@@ -12,20 +12,31 @@
 		$image = $_FILES['image']['tmp_name'];
 		$filename = $_FILES['image']['name'];
 		$description = htmlspecialchars($_POST['description']);
-		$id = $_SESSION['user_session'];
+		$id = 1;
 		$city = $_POST['city'];
-		$lastid = $conn->inser_id + 1;
-		$target_folder = "uploads/".$lastid.$filename;
-		move_uploaded_file(4image,)
+		
+		$target_folder = "uploads/".$filename;
+		move_uploaded_file($image, $target_folder);
 
 		try 
 		{
-			 $stmt = $pdo->prepare("INSERT INTO events (organiserid, event_start, event_end, event_start_time, event_end_time, category, title, venue, image) VALUES(:id, :start, :endd, :stime, :etime, :category, :title, :venue, :image)");
-		 	
+			 $stmt = $conn->prepare("INSERT INTO events (organiser_id, event_start, event_end, event_start_time, event_end_time, category, title, venue, image) VALUES(:id, :start, :endd, :stime, :etime, :category, :title, :venue, :image)");
+			 $stmt->bindparam(":id", $id);
+			 $stmt->bindparam(":start", $startdate);
+			 $stmt->bindparam(":endd", $enddate);
+			 $stmt->bindparam(":stime", $starttime);
+			 $stmt->bindparam(":etime", $endtime);
+			 $stmt->bindparam(":category", $category);
+			 $stmt->bindparam(":title", $title);
+			 $stmt->bindparam(":venue", $venue);
+			 $stmt->bindparam(":image", $target_folder);
+			 $stmt->execute();
+			  
 		} 
-		catch (PDOException $e) {
-		 	
-		 } 
+		catch (PDOException $e) 
+		{
+		 	echo $e->getMessage();
+		} 
 
 	}
 
@@ -36,7 +47,7 @@
 <head>
 	<title></title>
 	<script type="text/javascript" src = "javascript/jquery-3.2.1.js"></script>
-	<script type="text/javascript" src = "javascript/add_event.js"></script>
+	<script type="text/javascript" src = "javascript/addevent.js"></script>
 	<style type="text/css">
 
 	</style>
