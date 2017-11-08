@@ -1,14 +1,22 @@
-(function() {
-  'use strict';
+function on() {
+    document.getElementById("overlay").style.display = "block";
+}
 
-  window.addEventListener('load', function() {
-    var form = document.getElementById('needs-validation');
-    form.addEventListener('submit', function(event) {
-      if (form.checkValidity() === false) {
-        event.preventDefault();
-        event.stopPropagation();
-      }
-      form.classList.add('was-validated');
-    }, false);
-  }, false);
-})();
+function off() {
+    document.getElementById("overlay").style.display = "none";
+}
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+        document.getElementById("navbaar").style.opacity = 1;
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+        document.getElementById("navbaar").style.opacity = 0.7;
+    }
+}
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}

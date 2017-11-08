@@ -11,7 +11,8 @@
   	<title>EMS-AKGEC</title>
   </head>
   <body>
-  	<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+  	<button onclick="topFunction()" id="myBtn" title="Go to top"><b>^</b></button>
+  	<nav id="navbaar" class="navbar navbar-expand-lg navbar-dark sticky-top">
   		<a class="navbar-brand" href="index.html">
   			<img src="images/headerlogo.png" height="45px" class="d-inline-block align-top" alt="">
   			<div style="vertical-align: middle; font-size: 1.5em" class="d-inline-block">
@@ -49,56 +50,16 @@
   		</div>
   		<br>
   		<div class="row">
-			<div class="col-md-10 col-sm-9 col-">
-				<input type="text" class="form-control" placeholder="Search here" required>
-			</div>
-			<div class="col-md-1 col-sm-3">
-				<button style="margin-left:0px;" type="button" class="btn btn-primary">Search</button>
-			</div>
-		</div>
-		<br><br>
-  		<div class="card-deck">
-  			
-  			<div class="card">
-  				<img class="card-img-top" src="images/event1.jpg" alt="Card image cap">
-  				<div class="card-body">
-  					<h4 class="card-title">Event Name 1</h4>
-  					<p class="card-text">Event Date Event Time</p>
-  					<p class="card-text"><b>Event Category</b></p>
-  				</div>
-  				<div class="card-footer">
-  					<small class="text-muted">Register</small>
-  				</div>
+  			<div class="col-md-10 col-sm-9 col-">
+  				<input type="text" class="form-control" placeholder="Search here" required>
   			</div>
-  			<br>
-  			<div class="card">
-  				<img class="card-img-top" src="images/event2.jpg" alt="Card image cap">
-  				<div class="card-body">
-  					<h4 class="card-title">Event Name 2</h4>
-  					<p class="card-text">Event Date Event Time</p>
-  					<p class="card-text"><b>Event Category</b></p>
-  				</div>
-  				<div class="card-footer">
-  					<small class="text-muted">Register</small>
-  				</div>
+  			<div class="col-md-1 col-sm-3">
+  				<button style="margin-left:0px;" type="button" class="btn btn-primary">Search</button>
   			</div>
-  			<br>
-  			<div class="card">
-  				<img class="card-img-top" src="images/event3.jpg" alt="Card image cap">
-  				<div class="card-body">
-  					<h4 class="card-title">Event Name 3</h4>
-  					<p class="card-text">Event Date Event Time</p>
-  					<p class="card-text"><b>Event Category</b></p>
-  				</div>
-  				<div class="card-footer">
-  					<small class="text-muted">Register</small>
-  				</div>
-  			</div>
-  			<br>
   		</div>
   		<br><br>
-  		<div class="card-deck">
-  			<div class="card">
+  			<div class="row">
+  			<div class="card col-md-4">
   				<img class="card-img-top" src="images/event1.jpg" alt="Card image cap">
   				<div class="card-body">
   					<h4 class="card-title">Event Name 1</h4>
@@ -106,44 +67,56 @@
   					<p class="card-text"><b>Event Category</b></p>
   				</div>
   				<div class="card-footer">
-  					<small class="text-muted">Register</small>
+  					<button style="float: right;" type="button" class="btn btn-primary">View</button>
   				</div>
   			</div>
   			<br>
-  			<div class="card">
-  				<img class="card-img-top" src="images/event2.jpg" alt="Card image cap">
+  			<div class="card col-md-4">
+  				<img class="card-img-top" src="images/event1.jpg" alt="Card image cap">
   				<div class="card-body">
-  					<h4 class="card-title">Event Name 2</h4>
+  					<h4 class="card-title">Event Name 1</h4>
   					<p class="card-text">Event Date Event Time</p>
   					<p class="card-text"><b>Event Category</b></p>
   				</div>
   				<div class="card-footer">
-  					<small class="text-muted">Register</small>
+  					<button style="float: right;" type="button" class="btn btn-primary">View</button>
   				</div>
   			</div>
   			<br>
-  			<div class="card">
-  				<img class="card-img-top" src="images/event3.jpg" alt="Card image cap">
+  			<div class="card col-md-4">
+  				<img class="card-img-top" src="images/event1.jpg" alt="Card image cap">
   				<div class="card-body">
-  					<h4 class="card-title">Event Name 3</h4>
+  					<h4 class="card-title">Event Name 1</h4>
   					<p class="card-text">Event Date Event Time</p>
   					<p class="card-text"><b>Event Category</b></p>
   				</div>
   				<div class="card-footer">
-  					<small class="text-muted">Register</small>
+  					<button style="float: right;" type="button" class="btn btn-primary">View</button>
   				</div>
   			</div>
   			<br>
-  			
-  		</div>
+  			<div class="card col-md-4">
+  				<img class="card-img-top" src="images/event1.jpg" alt="Card image cap">
+  				<div class="card-body">
+  					<h4 class="card-title">Event Name 1</h4>
+  					<p class="card-text">Event Date Event Time</p>
+  					<p class="card-text"><b>Event Category</b></p>
+  				</div>
+  				<div class="card-footer">
+  					<button style="float: right;" type="button" class="btn btn-primary">View</button>
+  				</div>
+  			</div>
+  			<br>
+  		<br><br>
   	</div>
-  	</div>
+  </div>
 
-  	<footer class="footer fixed-bottom">
-  		<div style="text-align: center; padding: 10px; color: white;" class="bg-dark">
-  			EMS 2017
-  		</div>
-  	</footer>
+  <br><br><br><br><br>
+  <footer class="footer fixed-bottom">
+  	<div style="text-align: center; padding: 10px; color: white;" class="bg-dark">
+  		EMS 2017
+  	</div>
+  </footer>
 
 
 	<!--<h1 style="color:white; background-color:rgba(4.683962264150937%,66.42415702982352%,100%,0.9)">PARAM MITTAL</h1>
@@ -151,19 +124,6 @@
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
-	<script>(function() {
-		'use strict';
-
-		window.addEventListener('load', function() {
-			var form = document.getElementById('needs-validation');
-			form.addEventListener('submit', function(event) {
-				if (form.checkValidity() === false) {
-					event.preventDefault();
-					event.stopPropagation();
-				}
-				form.classList.add('was-validated');
-			}, false);
-		}, false);
-	})();</script>
+	<script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
