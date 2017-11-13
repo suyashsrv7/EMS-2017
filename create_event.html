@@ -9,9 +9,29 @@
   	<link rel="stylesheet" type="text/css" href="css/style.css">
   	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   	<title>EMS-AKGEC</title>
-  </head>
-  <body>
-  	<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+     <link href="css/my-style.css" rel="stylesheet" type="text/css" />
+ 
+<!-- custom css -->
+<link href="css/datedropper.css" rel="stylesheet" type="text/css" />
+<!-- jQuery lib -->
+<script type="text/javascript" src="js/script.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<!-- dateDropper lib -->
+<script src="js/datedropper.js"></script>
+<script src="js/timedropper.js"></script>
+<link rel="stylesheet" type="text/css" href="css/timedropper.css">
+<style>
+  .modal-dialog-lg{
+    width: 70%;
+    margin: auto;
+
+  }
+</style>
+</head>
+<body>
+<!-- tag element -->
+      <button onclick="topFunction()" id="myBtn" title="Go to top"><b>^</b></button>
+  	<nav id="navbaar" class="navbar navbar-expand-lg navbar-dark sticky-top">
   		<a class="navbar-brand" href="index.html">
   			<img src="images/headerlogo.png" height="45px" class="d-inline-block align-top" alt="">
   			<div style="vertical-align: middle; font-size: 1.5em" class="d-inline-block">
@@ -22,7 +42,7 @@
   			<span class="navbar-toggler-icon"></span>
   		</button>
   		<div class="justify-content-center">
-  			<a style="color:white;vertical-align: middle; font-size: 1.6em; align-items: center; text-decoration: none;" href="admin_dashboard.html"> ORGANISER</a>
+  			<a style="color:white;vertical-align: middle; font-size: 1.6em; align-items: center; text-decoration: none;" href="organiser_dashboard.html"> ORGANISER</a>
   		</div>
   		<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
   			<ul style="font-size: 1.2em" class="navbar-nav">
@@ -42,18 +62,14 @@
   	<br>
   	<div class="container">
   		<div class="row " style="text-align: center;">
-  			<div class="col-md-3 ">
+  			<div class="col-md-4 ">
   				<button onClick="location.href='create_event.html'" style="width: 85%; height: 50px; " type="button" class="btn btstyle2">Create Event</button>
   			</div>
-  			<div class="col-md-3 ">
-  				<button onClick="location.href='delete_organiser.html'" style="width: 85%; height: 50px" type="button" class="btn btstyle2">Delete Event </button>
+  			<div class="col-md-4">
+  				<button onClick="location.href='view_registration_organiser.html'" style="width: 85%; height: 50px; " type="button" class="btn btstyle2">View registrations</button>
   			</div>
-
-  			<div class="col-md-3">
-  				<button onClick="location.href='view_registration.html'" style="width: 85%; height: 50px; " type="button" class="btn btstyle2">View registrations</button>
-  			</div>
-  			<div class="col-md-3 ">
-  				<button onClick="location.href='delete_ongoing_event.html'" style="width: 85%; height: 50px" type="button" class="btn btstyle2">Delete Ongoing event</button>
+  			<div class="col-md-4 ">
+  				<button onClick="location.href='delete_ongoing_event_organiser.html'" style="width: 85%; height: 50px" type="button" class="btn btstyle2">Delete event</button>
   			</div>
 
   		</div>
@@ -62,21 +78,20 @@
   	<br>
   	<br>
   	<div class="container">
-  		<div class="col-md-12" style="text-align: center;font-size: 3em">
-  			Create Event
-  		</div>
-  		<br><br>
-
-  		<div class="modal-dialog" role="document">
+  		<div class="modal-dialog-lg" role="document">
   			<div  class="modal-content">
   				<div class="modal-header">
   					<h5 style="margin: 0 auto;" class="modal-title" id="LoginModalLabel">Create Event</h5>
   				</div>
   				<div class="modal-body">
   					<form class="container">
+              <div class="row">
+                <div class="col-6">
   						<label><b>Event Name</b></label>
-  						<input type="text" class="form-control" placeholder="Event name">
+              <input type="text" class="form-control" placeholder="Event Name">
+            </div>
   						<br>
+              <div class="col-6">
   						<label><b>Event Type</b></label>
   						<select class="form-control" id="exampleFormControlSelect1">
   							<option>------------</option>
@@ -85,33 +100,58 @@
   							<option >Sports</option>
   							<option >Literary</option>
   						</select>
+            </div>
+          </div>
   						<br>
+              <div class="row">
+              <div class="col-md-3 col-sm-3 col-6">  
   						<label><b>Starting Date</b></label><br>
-  						<input  type ="Date" id = "start" name = "start" placeholder = "Starting Date">
-  						<br>
+  						<input id="startdate" style="width: 120px;" class="form-control" type="text" data-min-year="2016" data-theme="my-style"/>
+              <div style="color: red; font-size: 0.8em;">sfsafas</div>
+              <!-- init dateDropper --><br><br>
+            </div>
+            <div class="col-md-3 col-sm-3 col-6">
   						<label><b>Ending Date</b></label><br>
-  						<input type = "Date" id = "end" name = "end" placeholder = "Ending Date">
+              <input id="enddate" style="width: 120px;" class="form-control" type="text" data-min-year="2016" data-theme="my-style"/>
   						<br>
+              <script>$('#startdate').dateDropper();</script>
+              <script>$('#enddate').dateDropper();</script>
+              <br>
+            </div>
+            <div class="col-md-3 col-sm-3 col-6">
   						<label><b>Starting Time</b></label><br>
-  						<input type = "time" id = "stime" name = "stime" placeholder = "Starting time">
-  						<br>
+  						<input style="width: 120px;" class="form-control" type="text" id="alarm1" />
+  						<br><br>
+            </div>
+            <div class="col-md-3 col-sm-3 col-6">
   						<label><b>Ending Time</b></label><br>
-  						<input type = "time" id = "etime" name = "etime" placeholder = "Ending time">
+  						<input style="width: 120px;" class="form-control" type="text" id="alarm2" />
   						<br>
+              <script>$( "#alarm1" ).timeDropper();</script>
+              <script>$( "#alarm2" ).timeDropper();</script>
+              <br>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6">
   						<label><b>Venue Name</b></label>
   						<input type="text" class="form-control" placeholder="Venue name">
   						<br>
+            </div>
+            <div class="col-6">
   						<label><b>City Name</b></label>
   						<input type="text" class="form-control" placeholder="City name">
   						<br>
+            </div>
+          </div>
   						<div class="form-group">
   							<label for="exampleTextarea"><b>Description</b></label>
   							<textarea placeholder="Add Event Description Here !!" class="form-control" id="exampleTextarea" rows="3"></textarea>
   						</div>
   						<br>
   						<label class="custom-file">
-  							<input type="file" id="file2" class="custom-file-input">
-  							<span class="custom-file-control"></span>
+  							<input type="file" class="custom-file-input">
+  							<p class="custom-file-control"></p>
   						</label>
   						<br><br><br>
   						<div class="container"  style="text-align: center;">
@@ -123,8 +163,8 @@
   			</div>
   		</div>
   	</div>
-  	<br><br>
-  	<footer class="footer fixed-bottom">
+  	<br><br><br><br>
+  	<footer class="footer">
   		<div style="text-align: center; padding: 10px; color: white;" class="bg-dark">
   			EMS 2017
   		</div>
@@ -136,19 +176,5 @@
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
-	<script>(function() {
-		'use strict';
-
-		window.addEventListener('load', function() {
-			var form = document.getElementById('needs-validation');
-			form.addEventListener('submit', function(event) {
-				if (form.checkValidity() === false) {
-					event.preventDefault();
-					event.stopPropagation();
-				}
-				form.classList.add('was-validated');
-			}, false);
-		}, false);
-	})();</script>
 </body>
 </html>

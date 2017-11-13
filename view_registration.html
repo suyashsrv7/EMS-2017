@@ -7,11 +7,13 @@
     <link rel="icon" href="images/logoic.ico">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="js/script.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 	<title>EMS-AKGEC</title>
 </head>
 <body>
-	<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+	<button onclick="topFunction()" id="myBtn" title="Go to top"><b>^</b></button>
+	<nav id="navbaar" class="navbar navbar-expand-lg navbar-dark sticky-top">
 		<a class="navbar-brand" href="index.html">
 			<img src="images/headerlogo.png" height="45px" class="d-inline-block align-top" alt="">
 			<div style="vertical-align: middle; font-size: 1.5em" class="d-inline-block">
@@ -64,131 +66,70 @@
 <br>
 <div class="container">
 		<div class="col-md-12" style="text-align: center;font-size: 3em">
-			Delete ongoing Event
-		</div>
+			View Registration
 		<br>
-		<div class="row">
-			<div class="col-md-10 col-sm-9 col-">
-				<input type="text" class="form-control" placeholder="Search here" required>
-			</div>
-			<div class="col-md-1 col-sm-3">
-				<button style="margin-left:0px;" type="button" class="btn btn-primary">Search</button>
-			</div>
+			<button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Search By Event&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  				</button>
 		</div>
 		<br><br>
 		<table class="table table-responsive table-striped">
 			<thead class="thead-inverse">
 				<tr>
 					<th style="vertical-align: middle;" scope="col">S.No.</th>
-					<th style="vertical-align: middle;" scope="col">Event ID</th>
-					<th style="vertical-align: middle;" scope="col">Event Name</th>
-					<th style="vertical-align: middle;" scope="col">Organiser Name</th>
-					<th style="vertical-align: middle;" scope="col">Event Category</th>
-					<th style="vertical-align: middle;" scope="col">Event start</th>
-					<th style="vertical-align: middle;" scope="col">Event end</th>
-					<th style="vertical-align: middle;" scope="col">Status</th>
+					<th style="vertical-align: middle;" scope="col">Name</th>
+					<th style="vertical-align: middle;" scope="col">Address</th>
+					<th style="vertical-align: middle;" scope="col">City</th>
+					<th style="vertical-align: middle;" scope="col">Mobile</th>
+					<th style="vertical-align: middle;" scope="col">Email Id</th>
 					<th style="vertical-align: middle;" scope="col">Delete</th>
-					<th style="vertical-align: middle;" scope="col">Event info</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr>
 					<th scope="row">1</th>
-					<th>id1</th>
 					<th>name1</th>
-					<th>oname1</th>
-					<th>cat1</th>
-					<th>start1</th>
-					<th>end1</th>
-					<th>status1</th>
+					<th>address1</th>
+					<th>city1</th>
+					<th>mobile1</th>
+					<th>Email Id1</th>
 					<th><button type="button" class="btn btn-danger" onclick='swal({title: "Delete File",text: "Are You sure ?",icon: "warning",buttons: true,dangerMode: true,}).then((willDelete) => {if (willDelete) {swal("Your event has been aborted!", {icon: "success",});} else {swal("Cancelled! Your event is safe!");}});'>Delete</button></th>
-					<th><button type="button" class="btn btn-primary">View</button></th>
-				</tr>
-				
-				<tr>
-					<th scope="row">1</th>
-					<th>id1</th>
-					<th>name1</th>
-					<th>oname1</th>
-					<th>cat1</th>
-					<th>start1</th>
-					<th>end1</th>
-					<th>status1</th>
-					<th><button type="button" class="btn btn-danger" onclick='swal({title: "Delete File",text: "Are You sure ?",icon: "warning",buttons: true,dangerMode: true,}).then((willDelete) => {if (willDelete) {swal("Your event has been aborted!", {icon: "success",});} else {swal("Cancelled! Your event is safe!");}});'>Delete</button></th>
-					<th><button type="button" class="btn btn-primary">View</button></th>
 				</tr>
 				<tr>
 					<th scope="row">1</th>
-					<th>id1</th>
 					<th>name1</th>
-					<th>oname1</th>
-					<th>cat1</th>
-					<th>start1</th>
-					<th>end1</th>
-					<th>status1</th>
+					<th>address1</th>
+					<th>city1</th>
+					<th>mobile1</th>
+					<th>Email Id1</th>
 					<th><button type="button" class="btn btn-danger" onclick='swal({title: "Delete File",text: "Are You sure ?",icon: "warning",buttons: true,dangerMode: true,}).then((willDelete) => {if (willDelete) {swal("Your event has been aborted!", {icon: "success",});} else {swal("Cancelled! Your event is safe!");}});'>Delete</button></th>
-					<th><button type="button" class="btn btn-primary">View</button></th>
 				</tr>
 				<tr>
 					<th scope="row">1</th>
-					<th>id1</th>
 					<th>name1</th>
-					<th>oname1</th>
-					<th>cat1</th>
-					<th>start1</th>
-					<th>end1</th>
-					<th>status1</th>
+					<th>address1</th>
+					<th>city1</th>
+					<th>mobile1</th>
+					<th>Email Id1</th>
 					<th><button type="button" class="btn btn-danger" onclick='swal({title: "Delete File",text: "Are You sure ?",icon: "warning",buttons: true,dangerMode: true,}).then((willDelete) => {if (willDelete) {swal("Your event has been aborted!", {icon: "success",});} else {swal("Cancelled! Your event is safe!");}});'>Delete</button></th>
-					<th><button type="button" class="btn btn-primary">View</button></th>
 				</tr>
 				<tr>
 					<th scope="row">1</th>
-					<th>id1</th>
 					<th>name1</th>
-					<th>oname1</th>
-					<th>cat1</th>
-					<th>start1</th>
-					<th>end1</th>
-					<th>status1</th>
+					<th>address1</th>
+					<th>city1</th>
+					<th>mobile1</th>
+					<th>Email Id1</th>
 					<th><button type="button" class="btn btn-danger" onclick='swal({title: "Delete File",text: "Are You sure ?",icon: "warning",buttons: true,dangerMode: true,}).then((willDelete) => {if (willDelete) {swal("Your event has been aborted!", {icon: "success",});} else {swal("Cancelled! Your event is safe!");}});'>Delete</button></th>
-					<th><button type="button" class="btn btn-primary">View</button></th>
-				</tr>
 				<tr>
 					<th scope="row">1</th>
-					<th>id1</th>
 					<th>name1</th>
-					<th>oname1</th>
-					<th>cat1</th>
-					<th>start1</th>
-					<th>end1</th>
-					<th>status1</th>
+					<th>address1</th>
+					<th>city1</th>
+					<th>mobile1</th>
+					<th>Email Id1</th>
 					<th><button type="button" class="btn btn-danger" onclick='swal({title: "Delete File",text: "Are You sure ?",icon: "warning",buttons: true,dangerMode: true,}).then((willDelete) => {if (willDelete) {swal("Your event has been aborted!", {icon: "success",});} else {swal("Cancelled! Your event is safe!");}});'>Delete</button></th>
-					<th><button type="button" class="btn btn-primary">View</button></th>
-				</tr>
-				<tr>
-					<th scope="row">1</th>
-					<th>id1</th>
-					<th>name1</th>
-					<th>oname1</th>
-					<th>cat1</th>
-					<th>start1</th>
-					<th>end1</th>
-					<th>status1</th>
-					<th><button type="button" class="btn btn-danger" onclick='swal({title: "Delete File",text: "Are You sure ?",icon: "warning",buttons: true,dangerMode: true,}).then((willDelete) => {if (willDelete) {swal("Your event has been aborted!", {icon: "success",});} else {swal("Cancelled! Your event is safe!");}});'>Delete</button></th>
-					<th><button type="button" class="btn btn-primary">View</button></th>
-				</tr>
-				<tr>
-					<th scope="row">1</th>
-					<th>id1</th>
-					<th>name1</th>
-					<th>oname1</th>
-					<th>cat1</th>
-					<th>start1</th>
-					<th>end1</th>
-					<th>status1</th>
-					<th><button type="button" class="btn btn-danger" onclick='swal({title: "Delete File",text: "Are You sure ?",icon: "warning",buttons: true,dangerMode: true,}).then((willDelete) => {if (willDelete) {swal("Your event has been aborted!", {icon: "success",});} else {swal("Cancelled! Your event is safe!");}});'>Delete</button></th>
-					<th><button type="button" class="btn btn-primary">View</button></th>
-				</tr>
+				</tr>				
 			</tbody>
 		</table>
 	</div>

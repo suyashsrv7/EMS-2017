@@ -7,11 +7,13 @@
     <link rel="icon" href="images/logoic.ico">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="js/script.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 	<title>EMS-AKGEC</title>
 </head>
 <body>
-	<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+	<button onclick="topFunction()" id="myBtn" title="Go to top"><b>^</b></button>
+	<nav id="navbaar" class="navbar navbar-expand-lg navbar-dark sticky-top">
 		<a class="navbar-brand" href="index.html">
 			<img src="images/headerlogo.png" height="45px" class="d-inline-block align-top" alt="">
 			<div style="vertical-align: middle; font-size: 1.5em" class="d-inline-block">
@@ -22,7 +24,7 @@
 			<span class="navbar-toggler-icon"></span>
 		</button>
 		<div class="justify-content-center">
-			<a style="color:white;vertical-align: middle; font-size: 1.6em; align-items: center; text-decoration: none;" href="admin_dashboard.html"> ADMIN</a>
+			<a style="color:white;vertical-align: middle; font-size: 1.6em; align-items: center; text-decoration: none;" href="Organiser_dashboard.html"> ORGANISER</a>
 		</div>
 		<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
 			<ul style="font-size: 1.2em" class="navbar-nav">
@@ -42,19 +44,15 @@
 	<br>
 <div class="container">
 	<div class="row " style="text-align: center;">
-		<div class="col-md-3 ">
-			<button onClick="location.href='event_status.html'" style="width: 85%; height: 50px; " type="button" class="btn btstyle2">Approve/Deny Events
+		<div class="col-md-4 ">
+			<button onClick="location.href='create_event.html'" style="width: 85%; height: 50px; " type="button" class="btn btstyle2">Create Event
 			</button>
 		</div>
-		<div class="col-md-3 ">
-			<button onClick="location.href='delete_organiser.html'" style="width: 85%; height: 50px" type="button" class="btn btstyle2">Delete Event Organiser</button>
+		<div class="col-md-4">
+			<button onClick="location.href='view_registration_organiser.html'" style="width: 85%; height: 50px; " type="button" class="btn btstyle2">View registrations</button>
 		</div>
-
-		<div class="col-md-3">
-			<button onClick="location.href='view_registration.html'" style="width: 85%; height: 50px; " type="button" class="btn btstyle2">View registrations</button>
-		</div>
-		<div class="col-md-3 ">
-			<button onClick="location.href='delete_ongoing_event.html'" style="width: 85%; height: 50px" type="button" class="btn btstyle2">Delete Ongoing event</button>
+		<div class="col-md-4 ">
+			<button onClick="location.href='delete_ongoing_event_organiser.html'" style="width: 85%; height: 50px" type="button" class="btn btstyle2">Delete event</button>
 		</div>
 		
 	</div>
